@@ -44,20 +44,38 @@
             class="menu-list__list list-unstyled"
             role="list"
           >
-            {% for link in block_settings.menu.links %}
-              <li>
-                <a
-                  href="{{ link.url }}"
-                  id="MenuItem-{{ link.handle }}"
-                  class="menu-list__item"
-                  {% if link.current %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  {{- link.title -}}
-                </a>
-              </li>
-            {% endfor %}
+            {% liquid
+              assign sos_titles = 'Shop,About,Journal,Contact' | split: ','
+              assign sos_urls = '/collections/all,/pages/about,/blogs/journal,/pages/contact' | split: ','
+            %}
+            {% if block_settings.menu.links.size > 1 %}
+              {% for link in block_settings.menu.links %}
+                <li>
+                  <a
+                    href="{{ link.url }}"
+                    id="MenuItem-{{ link.handle }}"
+                    class="menu-list__item"
+                    {% if link.current %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    {{- link.title -}}
+                  </a>
+                </li>
+              {% endfor %}
+            {% else %}
+              {% for i in (0..3) %}
+                <li>
+                  <a
+                    href="{{ sos_urls[i] }}"
+                    id="MenuItem-sos-{{ i }}"
+                    class="menu-list__item"
+                  >
+                    {{- sos_titles[i] -}}
+                  </a>
+                </li>
+              {% endfor %}
+            {% endif %}
           </ul>
         </div>
       </div>
@@ -92,6 +110,32 @@
     %}
 
     {% capture children %}
+      {% liquid
+        assign sos_titles = 'Shop,About,Journal,Contact' | split: ','
+        assign sos_urls = '/collections/all,/pages/about,/blogs/journal,/pages/contact' | split: ','
+      %}
+      {% unless block_settings.menu.links.size > 1 %}
+        {% for i in (0..3) %}
+          <li
+            role="presentation"
+            class="menu-list__list-item"
+            on:focus="/activate"
+            on:blur="/deactivate"
+            on:pointerenter="/activate"
+            on:pointerleave="/deactivate"
+          >
+            <a
+              href="{{ sos_urls[i] }}"
+              data-skip-node-update="true"
+              class="menu-list__link"
+              ref="menuitem"
+            >
+              <span class="menu-list__link-title">{{- sos_titles[i] -}}</span>
+            </a>
+          </li>
+        {% endfor %}
+      {% endunless %}
+      {% if block_settings.menu.links.size > 1 %}
       {% for link in block_settings.menu.links %}
         <li
           role="presentation"
@@ -148,6 +192,7 @@
           {%- endif -%}
         </li>
       {% endfor %}
+      {% endif %}
       <li
         class="menu-list__list-item"
         role="presentation"
