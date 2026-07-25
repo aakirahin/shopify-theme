@@ -93,6 +93,11 @@ hr {
   text-decoration: none;
 }
 
+/* Footer at full width keeps the same side gutters as the header (--page-margin) */
+.shopify-section-group-footer-group .section--full-width {
+  padding-inline: var(--page-margin);
+}
+
 .shopify-section-group-footer-group .text-block a,
 .shopify-section-group-footer-group .menu-list__link,
 header-component .menu-list__link,
