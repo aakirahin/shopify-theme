@@ -157,10 +157,11 @@ input[type='text'] {
 }
 
 .password-socials a {
-  font-family: var(--font-body--family);
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-family: var(--font-heading--family);
+  font-weight: 300;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
   text-decoration: none;
   color: var(--color-foreground);
   transition: opacity 0.25s ease, color 0.25s ease;
