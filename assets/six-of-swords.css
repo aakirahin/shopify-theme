@@ -30,24 +30,28 @@ h1 em, h2 em, h3 em, h4 em,
 /* (nav + action typography unified with footer links — see shared rule below) */
 
 /* --- Header link spacing: match the prelaunch socials (2.5rem rhythm) ---
-   The menu spaces items via its own variable, so override that directly. */
-header-component .menu-list {
-  --menu-horizontal-gap: 2.5rem;
+   The nav hardcodes --menu-horizontal-gap: 15px as an INLINE style, so
+   !important is required to outrank it. */
+header-component .menu-list,
+header-component .menu-list--mobile,
+header-component [style*='--menu-horizontal-gap'] {
+  --menu-horizontal-gap: 2.5rem !important;
 }
 
 header-component ul.menu-list,
 header-component .menu-list,
 header-component .menu-list__list {
-  column-gap: 2.5rem;
+  column-gap: 2.5rem !important;
 }
 
 header-component header-actions,
-header-component .header-actions {
+header-component .header-actions,
+header-component .header-actions--text {
   gap: 2.5rem !important;
 }
 
 header-component .header-actions__action {
-  padding-inline: 0;
+  padding-inline: 0 !important;
 }
 
 /* --- Hairlines stay quiet greige, never solid black --- */
@@ -202,7 +206,7 @@ input[type='text'] {
 .password-footer .password-footer__admin-link a,
 .password-footer p,
 .password-footer button {
-  font-size: 0.6875rem !important;
+  font-size: 0.75rem !important;
   color: #5b574e !important;
 }
 
