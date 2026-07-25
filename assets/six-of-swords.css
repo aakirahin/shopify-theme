@@ -118,6 +118,33 @@ header-component .menu-list {
   --opacity-subdued-text: 1;
 }
 
+/* --- Transparent header (landing page): never flash white on hover ---
+   Horizon solidifies the transparent header on :hover/:focus-within so mega-menu
+   panels stay readable, and SEPARATELY flips text colour only when a
+   .menu-list__link is hovered. Search/Account/Cart aren't .menu-list__link, which
+   is exactly why the left side behaved differently from the right. We have no
+   dropdowns, so both behaviours are pure noise. Sticky state is left alone, so the
+   header still goes solid white once you scroll. */
+header-component[transparent]:not([data-sticky-state='active']):is(:hover, :focus-within)
+  :is(.header__underlay-open, .header__underlay-closed) {
+  --color-background-top-row: transparent !important;
+  --color-background-bottom-row: transparent !important;
+}
+
+header-component[transparent]:not([data-sticky-state='active']) .header__row {
+  --color-foreground: var(--color-transparent-text) !important;
+  --color-foreground-rgb: var(--color-transparent-text-rgb) !important;
+  --color-border: var(--color-transparent-text) !important;
+  --color-border-rgb: var(--color-transparent-text-rgb) !important;
+}
+
+/* Over a hero, the hovered link keeps the transparent text colour (which may be
+   white on a dark image); the sibling fade supplies the contrast instead. */
+header-component[transparent]:not([data-sticky-state='active'])
+  :is(.menu-list__link, .header-actions__action):hover {
+  color: var(--color-transparent-text) !important;
+}
+
 /* --- Link hover: hovered item darkens, siblings fade evenly, no underline ---
    One fade layer per item: .menu-list__link (nav) and .header-actions__action
    (Search=button, Account=div, Cart=a) so nested markup can't double-fade. --- */
