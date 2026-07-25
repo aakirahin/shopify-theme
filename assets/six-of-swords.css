@@ -30,22 +30,25 @@ h1 em, h2 em, h3 em, h4 em,
 /* (nav + action typography unified with footer links — see shared rule below) */
 
 /* --- Header link spacing: match the prelaunch socials (2.5rem rhythm) ---
-   The nav hardcodes --menu-horizontal-gap: 15px as an INLINE style, so
-   !important is required to outrank it. */
+   The desktop nav does NOT space items with gap. Its list renders inside shadow
+   DOM (.overflow-menu::part(list)) with gap:0 — which is why every column-gap
+   rule aimed at .menu-list / .menu-list__list did nothing. The real spacing is
+   padding on each .menu-list__link-title: half the gap per side, so adjacent
+   links sit a full gap apart. The list also carries a negative inline margin to
+   cancel the first/last item's outer padding (keeping the nav flush with the
+   page edge), and that margin is keyed to --menu-horizontal-gap — so the padding
+   is expressed in the same variable to keep the edges aligned. */
 header-component .menu-list,
-header-component .menu-list--mobile,
-header-component [style*='--menu-horizontal-gap'] {
+header-component .menu-list--mobile {
   --menu-horizontal-gap: 2.5rem !important;
 }
 
-header-component ul.menu-list,
-header-component .menu-list,
-header-component .menu-list__list {
-  column-gap: 2.5rem !important;
+header-component .menu-list__link-title {
+  padding-inline: calc(var(--menu-horizontal-gap) / 2) !important;
 }
 
+/* The right-side actions genuinely are a flex row, so gap works there. */
 header-component header-actions,
-header-component .header-actions,
 header-component .header-actions--text {
   gap: 2.5rem !important;
 }
