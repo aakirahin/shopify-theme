@@ -69,7 +69,6 @@ hr {
 }
 
 .shopify-section-group-footer-group .text-block a,
-.shopify-section-group-footer-group .text-block p,
 .shopify-section-group-footer-group .menu-list__link,
 header-component .menu-list__link,
 header-component header-actions,
@@ -82,20 +81,25 @@ header-component header-actions :is(a, button, span) {
   color: var(--color-foreground);
 }
 
-/* --- Link hover (header + footer): hovered link darkens, siblings fade, no underline --- */
-header-component :is(a, button),
+/* --- Link hover: hovered item darkens, siblings fade evenly, no underline ---
+   One fade layer per item: .menu-list__link (nav) and .header-actions__action
+   (Search=button, Account=div, Cart=a) so nested markup can't double-fade. --- */
+header-component .menu-list__link,
+header-component .header-actions__action,
 .shopify-section-group-footer-group a {
   transition: opacity 0.25s ease, color 0.25s ease;
 }
 
-header-component :is(a, button):hover,
+header-component :is(.menu-list__link, .header-actions__action):hover,
 .shopify-section-group-footer-group a:hover {
   text-decoration: none !important;
   text-decoration-color: transparent !important;
   color: #000000;
+  opacity: 1;
 }
 
-header-component:has(:is(a, button):hover) :is(a, button):not(:hover):not(.header-logo, .header-logo *),
+header-component:has(:is(.menu-list__link, .header-actions__action):hover)
+  :is(.menu-list__link, .header-actions__action):not(:hover),
 .shopify-section-group-footer-group:has(a:hover) a:not(:hover) {
   opacity: 0.45;
 }
