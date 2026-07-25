@@ -198,8 +198,14 @@ input[type='text'] {
 .password-footer .password-footer__admin-link a,
 .password-footer p,
 .password-footer button {
-  font-size: 0.75rem !important;
+  font-size: 0.6875rem !important;
   color: #5b574e !important;
+}
+
+/* Arriving line: exact 10% letterspacing (block picker only offers presets) */
+.password-main-content .text-block--text-2,
+.password-main-content .text-block--text-2 p {
+  letter-spacing: 0.1em !important;
 }
 
 /* --- Rich text 'TOPIC'-style subheads inside journal & about pages --- */
