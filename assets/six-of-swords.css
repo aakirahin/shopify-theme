@@ -29,6 +29,19 @@ h1 em, h2 em, h3 em, h4 em,
 
 /* (nav + action typography unified with footer links — see shared rule below) */
 
+/* --- Header link spacing: match the prelaunch socials (2.5rem rhythm) --- */
+header-component .menu-list__list {
+  column-gap: 2.5rem;
+}
+
+header-component header-actions {
+  column-gap: 2.5rem;
+}
+
+header-component .header-actions__action {
+  padding-inline: 0;
+}
+
 /* --- Hairlines stay quiet greige, never solid black --- */
 .divider,
 hr {
