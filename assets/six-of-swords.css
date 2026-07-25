@@ -27,17 +27,7 @@ h1 em, h2 em, h3 em, h4 em,
   font-style: italic;
 }
 
-/* --- Navigation & header actions: small caps rhythm --- */
-.menu-list__link,
-.menu-list__link-title {
-  letter-spacing: 0.14em;
-}
-
-.header-actions--text,
-.header-actions__text-style,
-.account-button__text {
-  letter-spacing: 0.14em;
-}
+/* (nav + action typography unified with footer links — see shared rule below) */
 
 /* --- Hairlines stay quiet greige, never solid black --- */
 .divider,
@@ -73,17 +63,22 @@ hr {
   margin-block: 4rem 2rem;
 }
 
-/* --- Footer: serif links, no underlines, quiet spacing --- */
+/* --- Footer + header link typography: one shared serif voice --- */
 .shopify-section-group-footer-group a {
   text-decoration: none;
 }
 
 .shopify-section-group-footer-group .text-block a,
-.shopify-section-group-footer-group .menu-list__link {
+.shopify-section-group-footer-group .text-block p,
+.shopify-section-group-footer-group .menu-list__link,
+header-component .menu-list__link,
+header-component header-actions,
+header-component header-actions :is(a, button, span) {
   font-family: var(--font-heading--family);
   font-weight: 300;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   letter-spacing: 0.02em;
+  text-transform: none;
   color: var(--color-foreground);
 }
 
