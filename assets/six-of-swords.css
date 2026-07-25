@@ -4,13 +4,27 @@
    Palette: #f3f0ea paper / #1a1916 ink / #5b574e taupe / #dcd7cb hairline
    ------------------------------------------------------------ */
 
-/* --- Wordmark: Fraunces, uppercase, generously letterspaced --- */
+/* --- Wordmark: Fraunces Regular, uppercase, generously letterspaced --- */
 .header-logo,
 .header-logo a {
   font-family: var(--font-heading--family);
   text-transform: uppercase;
   letter-spacing: 0.22em;
   font-weight: 400;
+}
+
+/* --- All other Fraunces is Light (300), including italics --- */
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4,
+.cart-title h1,
+.rte h1, .rte h2, .rte h3 {
+  font-weight: 300;
+}
+
+h1 em, h2 em, h3 em, h4 em,
+.cart-title__empty-text {
+  font-weight: 300;
+  font-style: italic;
 }
 
 /* --- Navigation & header actions: small caps rhythm --- */

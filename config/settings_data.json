@@ -7,8 +7,8 @@
     "page_text_color": "{{ settings.color_palette.foreground }}",
     "type_body_font": "inter_n4",
     "type_subheading_font": "inter_n5",
-    "type_heading_font": "fraunces_n4",
-    "type_accent_font": "fraunces_n4",
+    "type_heading_font": "fraunces_n3",
+    "type_accent_font": "fraunces_n3",
     "type_size_paragraph": "14",
     "type_line_height_paragraph": "body-loose",
     "type_font_h1": "heading",
@@ -94,10 +94,10 @@
     "variant_button_radius": 0,
     "variant_button_width": "equal-width-buttons",
     "color_palette": {
-      "background": "#f3f0ea",
+      "background": "#ffffff",
       "foreground": "#1a1916",
       "color1": "#5b574e",
-      "color2": "#dcd7cb"
+      "color2": "#e5e2dc"
     }
   },
   "presets": {

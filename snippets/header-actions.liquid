@@ -24,7 +24,7 @@
     data-testid="cart-icon"
   >
     <span class="{% if display_style == 'icon' %}hidden{% else %}mobile:hidden{% endif %}">
-      {{ 'content.cart_title' | t }}
+      {{ 'content.cart_title' | t }}{% if display_style == 'text' %}&nbsp;({{ cart.item_count }}){% endif %}
     </span>
 
     <span
