@@ -87,10 +87,22 @@ hr {
   color: var(--color-foreground);
 }
 
-.shopify-section-group-footer-group .text-block a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.3em;
-  text-decoration-thickness: 1px;
+/* --- Link hover (header + footer): hovered link darkens, siblings fade, no underline --- */
+header-component :is(a, button),
+.shopify-section-group-footer-group a {
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+header-component :is(a, button):hover,
+.shopify-section-group-footer-group a:hover {
+  text-decoration: none !important;
+  text-decoration-color: transparent !important;
+  color: #000000;
+}
+
+header-component:has(:is(a, button):hover) :is(a, button):not(:hover):not(.header-logo, .header-logo *),
+.shopify-section-group-footer-group:has(a:hover) a:not(:hover) {
+  opacity: 0.45;
 }
 
 /* Newsletter text spans the same width as the email field below it */
