@@ -56,8 +56,13 @@ h1 em, h2 em, h3 em, h4 em,
     gap: 2.5rem !important;
   }
 
-  header-component .header-actions__action {
+  /* Only the 2.5rem gap should separate Search / Account / Cart — zero any
+     per-item margin or padding (the account button and cart link carry their
+     own) so the three sit on an even rhythm. */
+  header-component .header-actions__action,
+  header-component .header-actions--text > * {
     padding-inline: 0 !important;
+    margin-inline: 0 !important;
   }
 }
 
@@ -121,8 +126,9 @@ header-component header-actions :is(a, button, span) {
 /* Disable Horizon's built-in nav-link subduing (colour-alpha fade on hover/focus/
    active-page states) — it stacked with our opacity fade and made nav links fade
    double compared to Search/Account/Cart. Scoped to the menu list only. */
-header-component .menu-list {
-  --opacity-subdued-text: 1;
+header-component .menu-list,
+header-component .menu-list__link {
+  --opacity-subdued-text: 1 !important;
 }
 
 /* --- Transparent header (landing page): never flash white on hover ---
