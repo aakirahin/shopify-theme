@@ -197,7 +197,7 @@
           "type": "footer-copyright",
           "settings": {
             "show_powered_by": false,
-            "font_size": "0.75rem",
+            "font_size": "0.8rem",
             "case": "none"
           },
           "blocks": {}
