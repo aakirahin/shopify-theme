@@ -37,24 +37,28 @@ h1 em, h2 em, h3 em, h4 em,
    links sit a full gap apart. The list also carries a negative inline margin to
    cancel the first/last item's outer padding (keeping the nav flush with the
    page edge), and that margin is keyed to --menu-horizontal-gap — so the padding
-   is expressed in the same variable to keep the edges aligned. */
-header-component .menu-list,
-header-component .menu-list--mobile {
-  --menu-horizontal-gap: 2.5rem !important;
-}
+   is expressed in the same variable to keep the edges aligned.
 
-header-component .menu-list__link-title {
-  padding-inline: calc(var(--menu-horizontal-gap) / 2) !important;
-}
+   Desktop only: the MOBILE nav bar spaces items with a real gap AND this padding,
+   so applying both there would double-space it. Mobile keeps theme defaults. */
+@media screen and (min-width: 750px) {
+  header-component .menu-list {
+    --menu-horizontal-gap: 2.5rem !important;
+  }
 
-/* The right-side actions genuinely are a flex row, so gap works there. */
-header-component header-actions,
-header-component .header-actions--text {
-  gap: 2.5rem !important;
-}
+  header-component .menu-list__link-title {
+    padding-inline: calc(var(--menu-horizontal-gap) / 2) !important;
+  }
 
-header-component .header-actions__action {
-  padding-inline: 0 !important;
+  /* The right-side actions genuinely are a flex row, so gap works there. */
+  header-component header-actions,
+  header-component .header-actions--text {
+    gap: 2.5rem !important;
+  }
+
+  header-component .header-actions__action {
+    padding-inline: 0 !important;
+  }
 }
 
 /* --- Hairlines stay quiet greige, never solid black --- */
