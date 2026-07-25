@@ -211,7 +211,7 @@ input[type='text'] {
 .password-footer .password-footer__admin-link a,
 .password-footer p,
 .password-footer button {
-  font-size: 0.75rem !important;
+  font-size: 0.8125rem !important;
   color: #5b574e !important;
 }
 
