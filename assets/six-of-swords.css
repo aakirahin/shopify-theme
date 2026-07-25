@@ -193,11 +193,13 @@ input[type='text'] {
 }
 
 /* Prelaunch footer ("Enter using password" / owner link): same voice as the arriving line */
-.password-footer__button,
-.password-footer__admin-link,
-.password-footer__admin-link a {
-  font-size: var(--font-paragraph--size, 0.875rem);
-  color: #5b574e;
+.password-footer .password-footer__button,
+.password-footer .password-footer__admin-link,
+.password-footer .password-footer__admin-link a,
+.password-footer p,
+.password-footer button {
+  font-size: 0.75rem !important;
+  color: #5b574e !important;
 }
 
 /* --- Rich text 'TOPIC'-style subheads inside journal & about pages --- */
