@@ -130,6 +130,14 @@ header-component:has(:is(.menu-list__link, .header-actions__action):hover)
   color: inherit;
 }
 
+/* Footer email input matches the newsletter text (0.8125rem) */
+.shopify-section-group-footer-group .email-signup input,
+.shopify-section-group-footer-group .field__input,
+.shopify-section-group-footer-group .email-signup input::placeholder,
+.shopify-section-group-footer-group .email-signup button {
+  font-size: 0.8125rem;
+}
+
 /* --- Inputs: underline style, no boxes --- */
 .field__input,
 input[type='email'],
