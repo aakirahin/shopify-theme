@@ -64,7 +64,7 @@
         autocorrect="off"
         autocapitalize="off"
         autocomplete="email"
-        placeholder="{{ 'blocks.email_signup.placeholder' | t }}"
+        placeholder="{% if block_settings.custom_placeholder != blank %}{{ block_settings.custom_placeholder }}{% else %}{{ 'blocks.email_signup.placeholder' | t }}{% endif %}"
         required
         {% if form.errors and form.id == blank %}
           autofocus
@@ -558,6 +558,11 @@
       "unit": "px",
       "default": 100,
       "visible_if": "{{ block.settings.input_style == \"custom\" and block.settings.border_style != \"underline\" }}"
+    },
+    {
+      "type": "text",
+      "id": "custom_placeholder",
+      "label": "Custom placeholder"
     },
     {
       "type": "color",
