@@ -175,6 +175,14 @@ input[type='text'] {
   opacity: 0.45;
 }
 
+/* Prelaunch footer ("Enter using password" / owner link): same voice as the arriving line */
+.password-footer__button,
+.password-footer__admin-link,
+.password-footer__admin-link a {
+  font-size: var(--font-paragraph--size, 0.875rem);
+  color: #5b574e;
+}
+
 /* --- Rich text 'TOPIC'-style subheads inside journal & about pages --- */
 .rte h5,
 .rte h6,
