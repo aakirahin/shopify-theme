@@ -30,7 +30,11 @@ h1 em, h2 em, h3 em, h4 em,
 /* (nav + action typography unified with footer links — see shared rule below) */
 
 /* --- Header link spacing: match the prelaunch socials (2.5rem rhythm) ---
-   .menu-list = desktop nav; .menu-list__list = mobile nav bar */
+   The menu spaces items via its own variable, so override that directly. */
+header-component .menu-list {
+  --menu-horizontal-gap: 2.5rem;
+}
+
 header-component ul.menu-list,
 header-component .menu-list,
 header-component .menu-list__list {
@@ -39,7 +43,7 @@ header-component .menu-list__list {
 
 header-component header-actions,
 header-component .header-actions {
-  column-gap: 2.5rem;
+  gap: 2.5rem !important;
 }
 
 header-component .header-actions__action {
@@ -205,7 +209,7 @@ input[type='text'] {
 /* Arriving line: exact 10% letterspacing (block picker only offers presets) */
 .password-main-content .text-block--text-2,
 .password-main-content .text-block--text-2 p {
-  letter-spacing: 0.1em !important;
+  letter-spacing: 0.2em !important;
 }
 
 /* --- Rich text 'TOPIC'-style subheads inside journal & about pages --- */
