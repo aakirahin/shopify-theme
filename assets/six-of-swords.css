@@ -73,10 +73,43 @@ hr {
   margin-block: 4rem 2rem;
 }
 
-/* --- Footer: small serif links, generous spacing --- */
-.footer .menu-list__link,
-.footer a {
+/* --- Footer: serif links, no underlines, quiet spacing --- */
+.shopify-section-group-footer-group a {
+  text-decoration: none;
+}
+
+.shopify-section-group-footer-group .text-block a,
+.shopify-section-group-footer-group .menu-list__link {
+  font-family: var(--font-heading--family);
+  font-weight: 300;
+  font-size: 0.9375rem;
   letter-spacing: 0.02em;
+  color: var(--color-foreground);
+}
+
+.shopify-section-group-footer-group .text-block a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
+}
+
+/* Newsletter text spans the same width as the email field below it */
+.shopify-section-group-footer-group .group-block .text-block,
+.shopify-section-group-footer-group .group-block .text-block p {
+  width: 100%;
+  max-width: none;
+}
+
+/* Copyright: all caps, tracked, like the mock */
+.footer-utilities__group-copyright,
+.footer-utilities__text {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.6875rem;
+}
+
+.footer-utilities__text a {
+  color: inherit;
 }
 
 /* --- Inputs: underline style, no boxes --- */

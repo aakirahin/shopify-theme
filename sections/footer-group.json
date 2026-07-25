@@ -193,15 +193,7 @@
         "footer_copyright_jweRK8": {
           "type": "footer-copyright",
           "settings": {
-            "show_powered_by": true,
-            "font_size": "0.75rem",
-            "case": "none"
-          },
-          "blocks": {}
-        },
-        "footer_policy_list_VCdnpa": {
-          "type": "footer-policy-list",
-          "settings": {
+            "show_powered_by": false,
             "font_size": "0.75rem",
             "case": "none"
           },
@@ -209,14 +201,13 @@
         }
       },
       "block_order": [
-        "footer_copyright_jweRK8",
-        "footer_policy_list_VCdnpa"
+        "footer_copyright_jweRK8"
       ],
       "name": "t:names.utilities",
       "settings": {
         "section_width": "page-width",
         "gap": 24,
-        "divider_thickness": 1,
+        "divider_thickness": 0,
         "divider_color": "{{ settings.color_palette.color2 }}",
         "background_color": "{{ settings.color_palette.background }}",
         "padding-block-start": 20,
