@@ -76,23 +76,27 @@ h1 em, h2 em, h3 em, h4 em,
     margin: 0 !important;
   }
 
-  header-component .header-actions__cart-icon--text {
-    gap: 0 !important;
+  /* Search is NOT inside <header-actions> — it's a separate child of the right
+     column, which spaces its children with its own gap (1.25rem). That is why
+     Search→Account stayed tight while Account→Cart followed our 2.5rem. Set the
+     column's gap too, and drop the negative margin it uses to pull the actions
+     group back toward Search. */
+  header-component .header__column--right {
+    gap: 2.5rem !important;
+  }
+
+  header-component .header__column--right header-actions {
+    margin-inline-start: 0 !important;
   }
 }
 
-/* --- Wordmark stays dead-centre on every page ---
-   Two independent causes, both fixed here. First, the header grid is
-   `1fr auto 1fr`, but `1fr` means `minmax(auto, 1fr)`: a side track refuses to
-   shrink below its own content, so whenever the nav or the actions get wide the
-   centre track is pushed off-centre. minmax(0, 1fr) makes the two sides truly
-   equal. Second, a page that scrolls is ~15px narrower than one that doesn't, so
-   centred content shifts left on the longer pages — reserving the scrollbar
-   gutter keeps every page the same width. */
-html {
-  scrollbar-gutter: stable;
-}
-
+/* --- Wordmark stays centred ---
+   The header grid is `1fr auto 1fr`, but `1fr` means `minmax(auto, 1fr)`: a side
+   track refuses to shrink below its own content, so when the nav or the actions
+   get wide the centre track is pushed off-centre. minmax(0, 1fr) makes the two
+   sides truly equal. (A scrollbar can still shift centred content a few pixels
+   between scrolling and non-scrolling pages; reserving the gutter would fix that
+   but leaves a bare strip beside full-bleed images, so it's not worth it.) */
 header-component .header__columns {
   --header-left: minmax(0, 1fr);
   --header-right: minmax(0, 1fr);
