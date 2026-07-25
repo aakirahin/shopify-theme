@@ -1,0 +1,85 @@
+/* ------------------------------------------------------------
+   Six of Swords — brand layer
+   Ink-and-paper, quiet, letterspaced. Sits on top of Horizon.
+   Palette: #f3f0ea paper / #1a1916 ink / #5b574e taupe / #dcd7cb hairline
+   ------------------------------------------------------------ */
+
+/* --- Wordmark: Fraunces, uppercase, generously letterspaced --- */
+.header-logo,
+.header-logo a {
+  font-family: var(--font-heading--family);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 400;
+}
+
+/* --- Navigation & header actions: small caps rhythm --- */
+.menu-list__link,
+.menu-list__link-title {
+  letter-spacing: 0.14em;
+}
+
+.header-actions--text,
+.header-actions__text-style,
+.account-button__text {
+  letter-spacing: 0.14em;
+}
+
+/* --- Hairlines stay quiet greige, never solid black --- */
+.divider,
+hr {
+  border-color: #dcd7cb;
+}
+
+/* --- Buttons: square, uppercase, tracked --- */
+.button,
+.button-secondary {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+}
+
+/* --- Variant picker: sizes as quiet text, selected gets an underline --- */
+.variant-option__button-label {
+  padding-inline: 0.5rem;
+}
+
+.variant-option__button-label:has(input:checked) {
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
+  text-decoration-thickness: 1px;
+}
+
+/* --- Empty states: italic Fraunces, spacious --- */
+.cart-title__empty-text {
+  font-family: var(--font-heading--family);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--color-foreground);
+  margin-block: 4rem 2rem;
+}
+
+/* --- Footer: small serif links, generous spacing --- */
+.footer .menu-list__link,
+.footer a {
+  letter-spacing: 0.02em;
+}
+
+/* --- Inputs: underline style, no boxes --- */
+.field__input,
+input[type='email'],
+input[type='text'] {
+  border-radius: 0;
+}
+
+/* --- Rich text 'TOPIC'-style subheads inside journal & about pages --- */
+.rte h5,
+.rte h6,
+article .rte h5,
+article .rte h6 {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-family: var(--font-body--family);
+  font-weight: 500;
+  font-size: 0.8125rem;
+}

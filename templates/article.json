@@ -39,7 +39,7 @@
           "type": "_blog-post-info-text",
           "name": "t:names.details",
           "settings": {
-            "show_date": true,
+            "show_date": false,
             "show_author": false,
             "alignment": "center",
             "show_alignment": true,
@@ -73,13 +73,41 @@
           "type": "_blog-post-content",
           "settings": {},
           "blocks": {}
+        },
+        "read-time": {
+          "type": "custom-liquid",
+          "name": "Read time",
+          "settings": {
+            "custom_liquid": "{% assign words = article.content | strip_html | split: ' ' | size %}{% assign mins = words | divided_by: 200 | at_least: 1 %}<p style=\"text-align:center;text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;color:var(--color-foreground-muted, #5b574e);margin:0 0 12px;\">{{ mins }} min read</p>"
+          },
+          "blocks": {}
+        },
+        "back-to-journal": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Back to journal",
+            "link": "shopify://blogs/journal",
+            "open_in_new_tab": false,
+            "style_class": "button-secondary",
+            "custom_button_background": "rgba(0,0,0,0)",
+            "custom_button_text": "{{ settings.color_palette.foreground }}",
+            "custom_button_border": "{{ settings.color_palette.foreground }}",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
         }
       },
       "block_order": [
+        "read-time",
         "blog-post-title",
         "blog-post-details",
         "blog-post-image",
-        "blog-post-content"
+        "blog-post-content",
+        "back-to-journal"
       ],
       "settings": {
         "content_direction": "column",
