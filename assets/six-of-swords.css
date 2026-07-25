@@ -64,6 +64,38 @@ h1 em, h2 em, h3 em, h4 em,
     padding-inline: 0 !important;
     margin-inline: 0 !important;
   }
+
+  /* Account is a Shopify web component (<shopify-account>) that brings its own
+     box, and the cart link reserves a slot for an icon it doesn't show in text
+     mode. Both widen their item beyond its text and skew the visual gaps. */
+  header-component shopify-account {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  header-component .header-actions__cart-icon--text {
+    gap: 0 !important;
+  }
+}
+
+/* --- Wordmark stays dead-centre on every page ---
+   Two independent causes, both fixed here. First, the header grid is
+   `1fr auto 1fr`, but `1fr` means `minmax(auto, 1fr)`: a side track refuses to
+   shrink below its own content, so whenever the nav or the actions get wide the
+   centre track is pushed off-centre. minmax(0, 1fr) makes the two sides truly
+   equal. Second, a page that scrolls is ~15px narrower than one that doesn't, so
+   centred content shifts left on the longer pages — reserving the scrollbar
+   gutter keeps every page the same width. */
+html {
+  scrollbar-gutter: stable;
+}
+
+header-component .header__columns {
+  --header-left: minmax(0, 1fr);
+  --header-right: minmax(0, 1fr);
 }
 
 /* --- Hairlines stay quiet greige, never solid black --- */
@@ -151,34 +183,44 @@ header-component[transparent]:not([data-sticky-state='active']) .header__row {
   --color-border-rgb: var(--color-transparent-text-rgb) !important;
 }
 
-/* Over a hero, the hovered link keeps the transparent text colour (which may be
-   white on a dark image); the sibling fade supplies the contrast instead. */
-header-component[transparent]:not([data-sticky-state='active'])
-  :is(.menu-list__link, .header-actions__action):hover {
-  color: var(--color-transparent-text) !important;
+/* --- Link hover: ONE mechanism (opacity), so the two groups cannot diverge ---
+   The real bug: Horizon has its own colour-based fade AND its own hovered-link
+   repaint, both written against .menu-list__link — the left group only. And its
+   selectors outrank ours: `.menu-list ... .menu-list__link` scores (0,3,0) while
+   our `header-component ...:hover` scores (0,2,1), so on the left the theme won
+   the colour and our change never applied at all, while on the right (no theme
+   rule) ours did. Two different fades on two different sides.
+
+   Fix: kill the theme's colour fade with a matching-shape selector plus
+   !important, and stop changing colour on hover entirely. Opacity alone now does
+   the work — identical on both sides, smooth, and still correct over the
+   transparent header, where a hard-coded colour would fight the image. */
+header-component
+  .menu-list:where(:has(.menu-list__list-item:is(:hover, :focus-within)))
+  .menu-list__link,
+header-component
+  .menu-list:where(:has(.menu-list__list-item:not([aria-hidden='true']) .menu-list__link--active))
+  .menu-list__link {
+  color: var(--menu-top-level-font-color) !important;
 }
 
-/* --- Link hover: hovered item darkens, siblings fade evenly, no underline ---
-   One fade layer per item: .menu-list__link (nav) and .header-actions__action
-   (Search=button, Account=div, Cart=a) so nested markup can't double-fade. --- */
 header-component .menu-list__link,
 header-component .header-actions__action,
 .shopify-section-group-footer-group a {
-  transition: opacity 0.25s ease, color 0.25s ease;
+  transition: opacity 0.25s ease;
 }
 
 header-component :is(.menu-list__link, .header-actions__action):hover,
 .shopify-section-group-footer-group a:hover {
   text-decoration: none !important;
   text-decoration-color: transparent !important;
-  color: #000000;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 header-component:has(:is(.menu-list__link, .header-actions__action):hover)
   :is(.menu-list__link, .header-actions__action):not(:hover),
 .shopify-section-group-footer-group:has(a:hover) a:not(:hover) {
-  opacity: 0.45;
+  opacity: 0.45 !important;
 }
 
 /* Newsletter text spans the same width as the email field below it */
