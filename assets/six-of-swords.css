@@ -81,6 +81,13 @@ header-component header-actions :is(a, button, span) {
   color: var(--color-foreground);
 }
 
+/* Disable Horizon's built-in nav-link subduing (colour-alpha fade on hover/focus/
+   active-page states) — it stacked with our opacity fade and made nav links fade
+   double compared to Search/Account/Cart. Scoped to the menu list only. */
+header-component .menu-list {
+  --opacity-subdued-text: 1;
+}
+
 /* --- Link hover: hovered item darkens, siblings fade evenly, no underline ---
    One fade layer per item: .menu-list__link (nav) and .header-actions__action
    (Search=button, Account=div, Cart=a) so nested markup can't double-fade. --- */
