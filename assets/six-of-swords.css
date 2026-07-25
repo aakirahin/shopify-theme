@@ -145,6 +145,35 @@ input[type='text'] {
   border-radius: 0;
 }
 
+/* --- Prelaunch page: social links, top right --- */
+.password-socials {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 2.5rem;
+  padding: 1.75rem 2.5rem;
+  z-index: 2;
+}
+
+.password-socials a {
+  font-family: var(--font-body--family);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-foreground);
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+.password-socials a:hover {
+  color: #000000;
+}
+
+.password-socials:has(a:hover) a:not(:hover) {
+  opacity: 0.45;
+}
+
 /* --- Rich text 'TOPIC'-style subheads inside journal & about pages --- */
 .rte h5,
 .rte h6,
