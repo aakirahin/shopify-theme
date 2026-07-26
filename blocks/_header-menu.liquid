@@ -46,7 +46,7 @@
           >
             {% liquid
               assign sos_titles = 'Shop,About,Journal,Contact' | split: ','
-              assign sos_urls = '/pages/shop,/pages/about,/blogs/journal,/pages/contact' | split: ','
+              assign sos_urls = '/collections/all,/pages/about,/blogs/journal,/pages/contact' | split: ','
             %}
             {% if block_settings.menu.links.size > 1 %}
               {% for link in block_settings.menu.links %}
@@ -112,7 +112,7 @@
     {% capture children %}
       {% liquid
         assign sos_titles = 'Shop,About,Journal,Contact' | split: ','
-        assign sos_urls = '/pages/shop,/pages/about,/blogs/journal,/pages/contact' | split: ','
+        assign sos_urls = '/collections/all,/pages/about,/blogs/journal,/pages/contact' | split: ','
       %}
       {% unless block_settings.menu.links.size > 1 %}
         {% for i in (0..3) %}
