@@ -279,7 +279,7 @@ input[type='text'] {
   border-radius: 0;
 }
 
-/* --- Prelaunch page: social links, top right --- */
+/* --- Prelaunch page: social links, top right (centred on mobile) --- */
 .password-socials {
   position: absolute;
   top: 0;
@@ -288,6 +288,22 @@ input[type='text'] {
   gap: 2.5rem;
   padding: 1.75rem 2.5rem;
   z-index: 2;
+}
+
+@media screen and (max-width: 749px) {
+  .password-socials {
+    position: static;
+    justify-content: center;
+    gap: 2rem;
+    padding-inline: 1rem;
+  }
+}
+
+/* Prelaunch email field matches the footer signup's size */
+.password-main-content .email-signup__input,
+.password-main-content .email-signup__input::placeholder,
+.password-main-content .email-signup__button {
+  font-size: 0.8125rem;
 }
 
 .password-socials a {
