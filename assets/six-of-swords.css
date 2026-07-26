@@ -102,6 +102,15 @@ header-component .header__columns {
   --header-right: minmax(0, 1fr);
 }
 
+/* A page that scrolls is ~15px narrower than one that doesn't, so anything
+   centred sits a few pixels left on the taller pages — that's why the wordmark
+   moved on Contact but not on About. Keeping the scrollbar track present on
+   every page makes the width constant. (scrollbar-gutter would do this too, but
+   it reserves an extra strip the full-bleed hero can't cover.) */
+html {
+  overflow-y: scroll;
+}
+
 /* --- Hairlines stay quiet greige, never solid black --- */
 .divider,
 hr {
@@ -133,7 +142,7 @@ hr {
   font-style: italic;
   font-size: 1.5rem;
   color: var(--color-foreground);
-  margin-block: 4rem 2rem;
+  margin-block: 3rem 2rem;
 }
 
 /* --- Footer + header link typography: one shared serif voice --- */
