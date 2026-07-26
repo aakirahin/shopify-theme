@@ -42,7 +42,7 @@
           "type": "text",
           "name": "t:names.title",
           "settings": {
-            "text": "<p>Notes on making and keeping</p>",
+            "text": "<p>Making and Keeping</p>",
             "width": "100%",
             "max_width": "narrow",
             "alignment": "center",
