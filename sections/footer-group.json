@@ -121,7 +121,7 @@
             "newsletter_text": {
               "type": "text",
               "settings": {
-                "text": "<p>Sign up to our newsletter and get 10% off your first order. Be the first to hear about new collections.</p>",
+                "text": "<p>Sign up to our newsletter and get 10% off your first order. Be the first to hear about exclusive offers and new collections.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
