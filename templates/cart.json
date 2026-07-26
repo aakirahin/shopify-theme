@@ -20,6 +20,7 @@
             "show_count": false,
             "type_preset": "h2",
             "alignment": "center",
+            "text_color": "",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -35,6 +36,12 @@
             "image_ratio": "portrait",
             "dividers": true,
             "vendor": false,
+            "input_style": "default",
+            "input_background_color": "{{ settings.color_palette.background }}",
+            "input_text_color": "{{ settings.color_palette.foreground }}",
+            "input_border_color": "{{ settings.color_palette.foreground }}",
+            "border_width": 1,
+            "border_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -48,9 +55,11 @@
           "settings": {
             "extend_summary": true,
             "background_color": "{{ settings.color_palette.color2 }}",
+            "text_color": "",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
+            "border_color": "",
             "border_radius": 0
           },
           "blocks": {}
@@ -59,7 +68,8 @@
       "settings": {
         "section_width": "page-width",
         "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 48,
+        "text_color": "",
+        "padding-block-start": 32,
         "padding-block-end": 0
       }
     }
