@@ -136,12 +136,19 @@ hr {
   text-decoration-thickness: 1px;
 }
 
-/* --- Empty states: italic Fraunces, spacious --- */
-.cart-title__empty-text {
+/* --- Empty states: italic Fraunces, spacious, taupe ---
+   Cart, empty collection, and the 404 line all share one voice. */
+.cart-title__empty-text,
+.main-collection-grid__empty-title,
+.main-collection-grid__empty-title.h2 {
   font-family: var(--font-heading--family);
   font-style: italic;
+  font-weight: 300;
   font-size: 1.5rem;
-  color: var(--color-foreground);
+  color: #5b574e;
+}
+
+.cart-title__empty-text {
   margin-block: 3rem 2rem;
 }
 
