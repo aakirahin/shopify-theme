@@ -307,49 +307,36 @@ input[type='text'] {
   letter-spacing: 0.2em !important;
 }
 
-/* --- Return request form --- */
+/* --- Return request form ---
+   Reuses the theme's own contact-form classes so the inputs, spacing and rows
+   are identical to the Contact page. Only the width needs setting, because the
+   custom-liquid block has no width setting of its own (the contact-form block
+   sits at 50% of the page width). */
 .return-form {
-  max-width: 32rem;
+  width: 100%;
+  max-width: 44rem;
   margin-inline: auto;
 }
 
-.return-form label {
-  display: block;
-  margin-block: 1.5rem 0.5rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #5b574e;
-}
-
-.return-form input,
-.return-form select,
-.return-form textarea {
-  width: 100%;
-  padding: 0.5rem 0;
-  border: 0;
-  border-bottom: 1px solid var(--color-border, #e5e2dc);
-  border-radius: 0;
-  background: transparent;
-  font-family: var(--font-body--family);
-  font-size: 0.875rem;
-  color: var(--color-foreground);
-}
-
-.return-form textarea {
-  resize: vertical;
+.return-form select.contact-form__input {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, currentcolor 50%),
+    linear-gradient(135deg, currentcolor 50%, transparent 50%);
+  background-position: calc(100% - 20px) center, calc(100% - 15px) center;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
 }
 
 .return-form .button {
-  margin-block-start: 2.5rem;
+  align-self: flex-start;
+  margin-block-start: 0.5rem;
 }
 
-.return-form__success,
-.return-form__error {
+.contact-form__success,
+.contact-form__error {
   font-family: var(--font-heading--family);
   font-style: italic;
   font-size: 1.125rem;
-  margin-block-end: 2rem;
 }
 
 /* --- Policy content pulled into the Shipping & Returns page --- */
