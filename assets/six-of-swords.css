@@ -262,11 +262,13 @@ header-component:has(:is(.menu-list__link, .header-actions__action):hover)
   color: inherit;
 }
 
-/* Footer email input matches the newsletter text (0.8125rem) */
-.shopify-section-group-footer-group .email-signup input,
-.shopify-section-group-footer-group .field__input,
-.shopify-section-group-footer-group .email-signup input::placeholder,
-.shopify-section-group-footer-group .email-signup button {
+/* Footer email input matches the newsletter text (0.8125rem).
+   The block's wrapper class is `email-signup-block`, not `email-signup`, so a
+   `.email-signup input` descendant selector never matched — target the element
+   classes directly. */
+.shopify-section-group-footer-group .email-signup__input,
+.shopify-section-group-footer-group .email-signup__input::placeholder,
+.shopify-section-group-footer-group .email-signup__button {
   font-size: 0.8125rem;
 }
 

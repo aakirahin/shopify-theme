@@ -104,7 +104,30 @@
           {%- comment -%}
             Handle menus with fewer than 3 levels of links
           {%- endcomment -%}
-          {% if linklist.levels < 3 %}
+          {%- comment -%}
+            Fallback: while the store's menu still has one link or none, show the
+            site's four sections so the drawer matches the desktop nav. A real
+            menu with 2+ links takes over completely.
+          {%- endcomment -%}
+          {% if linklist.links.size <= 1 %}
+            {% liquid
+              assign sos_titles = 'Shop,About,Journal,Contact' | split: ','
+              assign sos_urls = '/collections/all,/pages/about,/blogs/journal,/pages/contact' | split: ','
+            %}
+            {% for i in (0..3) %}
+              <li
+                style="--menu-drawer-animation-index: {{ forloop.index }};"
+                class="{%- if block_settings.drawer_accordion -%}menu-drawer__list-item--deep{%- else -%}menu-drawer__list-item--flat{%- endif -%}{% if block_settings.drawer_dividers %} menu-drawer__list-item--divider{% endif %}"
+              >
+                <a
+                  href="{{ sos_urls[i] }}"
+                  class="menu-drawer__menu-item menu-drawer__menu-item--mainlist menu-drawer__animated-element focus-inset"
+                >
+                  <span class="menu-drawer__menu-item-text wrap-text">{{ sos_titles[i] }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          {% elsif linklist.levels < 3 %}
             {% assign first_accordion_open = false %}
             {% assign animation_index = 0 %}
             {%- for link in linklist.links -%}
