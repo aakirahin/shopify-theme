@@ -313,10 +313,23 @@ input[type='text'] {
    page renders a custom-liquid block, not the contact-form block. So the classes
    arrived with no CSS behind them. These rules mirror the contact-form block's
    own stylesheet so the two pages look identical. */
+/* The custom-liquid block wraps its content in a bare <div> with no width of its
+   own, so inside the section's centred flex column it shrink-wraps to the inputs'
+   intrinsic width (~500px) instead of filling. Stretch the wrapper, then match
+   the contact-form block's 50% column exactly. */
+div:has(> .return-form) {
+  width: 100%;
+}
+
 .return-form {
   width: 100%;
-  max-width: 44rem;
   margin-inline: auto;
+}
+
+@media screen and (min-width: 750px) {
+  .return-form {
+    width: 50%;
+  }
 }
 
 .return-form .contact-form__form {
@@ -375,10 +388,15 @@ input[type='text'] {
 }
 
 /* --- Policy content (Shipping & Returns) — structured like the Policy mockup:
-   centred column, sub-headings as small uppercase SUBTITLE labels. --- */
+   centred column, everything in taupe, sub-headings as small uppercase labels. --- */
 .policy-content {
   max-width: 44rem;
   margin-inline: auto;
+}
+
+.policy-content,
+.policy-content :is(p, li, td, th, a, span, em) {
+  color: #5b574e;
 }
 
 .policy-content :is(h1, h2, h3, h4, h5, h6),
@@ -389,7 +407,7 @@ input[type='text'] {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--color-foreground);
+  color: #5b574e;
   margin-block: 3rem 0.75rem;
 }
 
