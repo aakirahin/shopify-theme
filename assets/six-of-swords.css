@@ -279,6 +279,21 @@ input[type='text'] {
   border-radius: 0;
 }
 
+/* --- Password dialog: input and submit button share one width --- */
+.password-dialog .email-signup__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.password-dialog .email-signup__input-group > .field__input,
+.password-dialog .email-signup__input-group > .password-dialog__submit-button {
+  width: 100%;
+  margin-inline: 0;
+  box-sizing: border-box;
+}
+
 /* --- Prelaunch page: social links, top right (centred on mobile) --- */
 .password-socials {
   position: absolute;
