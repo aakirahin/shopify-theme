@@ -1,0 +1,77 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "title": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-heading--family)",
+            "line_height": "loose",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "intro": {
+          "type": "text",
+          "settings": {
+            "text": "{{ closest.page.content }}",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "line_height": "loose",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "form": {
+          "type": "custom-liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"return-form\">\n  {%- form 'contact' -%}\n    {%- if form.posted_successfully? -%}\n      <p class=\"return-form__success\">Thank you \u2014 your request has reached us. We'll reply within two working days with next steps.</p>\n    {%- endif -%}\n\n    {%- if form.errors -%}\n      <p class=\"return-form__error\">Please check the highlighted fields and try again.</p>\n    {%- endif -%}\n\n    <label for=\"return-name\">Name</label>\n    <input type=\"text\" id=\"return-name\" name=\"contact[name]\" value=\"{{ form.name }}\" required>\n\n    <label for=\"return-email\">Email</label>\n    <input type=\"email\" id=\"return-email\" name=\"contact[email]\" value=\"{{ form.email }}\" required>\n\n    <label for=\"return-order\">Order number</label>\n    <input type=\"text\" id=\"return-order\" name=\"contact[Order number]\" placeholder=\"e.g. #1024\" required>\n\n    <label for=\"return-item\">Piece you're returning</label>\n    <input type=\"text\" id=\"return-item\" name=\"contact[Item]\" required>\n\n    <label for=\"return-reason\">Reason</label>\n    <select id=\"return-reason\" name=\"contact[Reason]\">\n      <option>Sizing \u2014 too small</option>\n      <option>Sizing \u2014 too large</option>\n      <option>Not as expected</option>\n      <option>Fault or damage</option>\n      <option>Changed my mind</option>\n      <option>Other</option>\n    </select>\n\n    <label for=\"return-body\">Anything else we should know</label>\n    <textarea id=\"return-body\" name=\"contact[body]\" rows=\"5\">{{ form.body }}</textarea>\n\n    <button type=\"submit\" class=\"button\">Send request</button>\n  {%- endform -%}\n</div>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "intro",
+        "form"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "gap": 24,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 40,
+        "padding-block-end": 96
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
