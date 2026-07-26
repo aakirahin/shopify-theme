@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "main": {
       "type": "main-404",
@@ -15,12 +16,12 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<h1>Page not found</h1>",
+            "text": "<h1>404.</h1>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h3",
-            "font": "var(--font-body--family)",
+            "type_preset": "h1",
+            "font": "var(--font-heading--family)",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -39,12 +40,12 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>The link may be incorrect, or the page has been removed. </p>",
+            "text": "<p><em>Page not found.</em></p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
+            "type_preset": "h4",
+            "font": "var(--font-heading--family)",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -53,7 +54,7 @@
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 16,
+            "padding-block-end": 24,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
@@ -63,10 +64,10 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Continue shopping",
+            "label": "Start shopping",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
-            "style_class": "button",
+            "style_class": "button-primary",
             "width": "fit-content",
             "custom_width": 100,
             "width_mobile": "fit-content",
@@ -86,7 +87,7 @@
         "section_height": "small",
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 20,
+        "gap": 12,
         "background_color": "{{ settings.color_palette.background }}",
         "padding-block-start": 100,
         "padding-block-end": 100

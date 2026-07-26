@@ -29,7 +29,7 @@
         "policies": {
           "type": "custom-liquid",
           "settings": {
-            "custom_liquid": "<div class=\"policy-content rte\">\n  {%- if page.content != blank -%}\n    {{ page.content }}\n  {%- endif -%}\n\n  {%- if shop.shipping_policy.body != blank -%}\n    <h2>Shipping</h2>\n    {{ shop.shipping_policy.body }}\n  {%- endif -%}\n\n  {%- if shop.refund_policy.body != blank -%}\n    <h2>Returns &amp; refunds</h2>\n    {{ shop.refund_policy.body }}\n  {%- endif -%}\n\n  {%- if shop.shipping_policy.body == blank and shop.refund_policy.body == blank -%}\n    <p>Our shipping and returns policies are being finalised.</p>\n  {%- endif -%}\n</div>"
+            "custom_liquid": "<div class=\"policy-content rte\">\n  {%- if page.content != blank -%}\n    {{ page.content }}\n  {%- endif -%}\n\n  {%- if shop.shipping_policy.body != blank -%}\n    {{ shop.shipping_policy.body }}\n  {%- endif -%}\n\n  {%- if shop.refund_policy.body != blank -%}\n    {{ shop.refund_policy.body }}\n  {%- endif -%}\n\n  {%- if shop.shipping_policy.body == blank and shop.refund_policy.body == blank -%}\n    <p>Our shipping and returns policies are being finalised.</p>\n  {%- endif -%}\n</div>"
           },
           "blocks": {}
         }

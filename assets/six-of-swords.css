@@ -308,14 +308,50 @@ input[type='text'] {
 }
 
 /* --- Return request form ---
-   Reuses the theme's own contact-form classes so the inputs, spacing and rows
-   are identical to the Contact page. Only the width needs setting, because the
-   custom-liquid block has no width setting of its own (the contact-form block
-   sits at 50% of the page width). */
+   It reuses the theme's contact-form class names, but Shopify only ships a
+   block's {% stylesheet %} when that block is actually on the page — and this
+   page renders a custom-liquid block, not the contact-form block. So the classes
+   arrived with no CSS behind them. These rules mirror the contact-form block's
+   own stylesheet so the two pages look identical. */
 .return-form {
   width: 100%;
   max-width: 44rem;
   margin-inline: auto;
+}
+
+.return-form .contact-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md, 1rem);
+}
+
+.return-form .contact-form__form-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md, 1rem);
+}
+
+@media screen and (min-width: 750px) {
+  .return-form .contact-form__form-row {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.return-form .contact-form__input {
+  width: 100%;
+  color: var(--color-input-text);
+  background-color: var(--color-input-background);
+  padding: var(--padding-lg, 0.75rem) var(--padding-xl, 1rem);
+  border: var(--style-border-width-inputs, 1px) solid var(--color-input-border, #e5e2dc);
+  border-radius: var(--style-border-radius-inputs, 0);
+  font-family: var(--font-body--family);
+  font-size: 0.875rem;
+}
+
+.return-form .contact-form__input--textarea {
+  resize: vertical;
+  min-height: var(--input-textarea-min-height, 12rem);
 }
 
 .return-form select.contact-form__input {
@@ -329,7 +365,6 @@ input[type='text'] {
 
 .return-form .button {
   align-self: flex-start;
-  margin-block-start: 0.5rem;
 }
 
 .contact-form__success,
@@ -339,14 +374,28 @@ input[type='text'] {
   font-size: 1.125rem;
 }
 
-/* --- Policy content pulled into the Shipping & Returns page --- */
-.policy-content h2 {
-  margin-block: 3rem 1rem;
+/* --- Policy content (Shipping & Returns) — structured like the Policy mockup:
+   centred column, sub-headings as small uppercase SUBTITLE labels. --- */
+.policy-content {
+  max-width: 44rem;
+  margin-inline: auto;
 }
 
-.policy-content {
-  max-width: 42rem;
-  margin-inline: auto;
+.policy-content :is(h1, h2, h3, h4, h5, h6),
+.policy-content p > strong:only-child {
+  display: block;
+  font-family: var(--font-body--family);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-foreground);
+  margin-block: 3rem 0.75rem;
+}
+
+.policy-content :is(h1, h2, h3, h4, h5, h6):first-child,
+.policy-content p:first-child > strong:only-child {
+  margin-block-start: 0;
 }
 
 /* --- Rich text 'TOPIC'-style subheads inside journal & about pages --- */
