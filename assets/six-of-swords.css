@@ -294,6 +294,19 @@ input[type='text'] {
   box-sizing: border-box;
 }
 
+/* --- Prelaunch background image ---
+   The section's background_media is set to "image" with no image chosen yet, so
+   this grey stands in as the placeholder (matching the Figma). Pick an image in
+   the theme editor (Password page -> section -> Background image) and it takes
+   over automatically — :has() drops the placeholder once real media is present. */
+.password-main-content .section:not(:has(img, video)) {
+  background-color: #e6e4e0;
+}
+
+.password-main-content .section {
+  min-height: 100svh;
+}
+
 /* --- Prelaunch page: social links, top right (centred on mobile) --- */
 .password-socials {
   position: absolute;
