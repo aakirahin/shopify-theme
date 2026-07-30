@@ -465,6 +465,14 @@ div:has(> .return-form) {
   margin-block-start: 0;
 }
 
+/* --- About / policy pages: centred reading column, matching the mockup ---
+   main-page renders its content in `.section.page-width-content`; narrowing that
+   keeps the eyebrow, title, body and images on one column like the design. */
+.template-suffix-about .section.page-width-content {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
 /* --- Rich text 'TOPIC'-style subheads inside journal & about pages --- */
 .rte h5,
 .rte h6,

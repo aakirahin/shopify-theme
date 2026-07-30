@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -14,75 +5,283 @@
       "blocks": {
         "eyebrow": {
           "type": "text",
-          "name": "t:names.text",
           "settings": {
             "text": "<p>About</p>",
             "width": "100%",
-            "max_width": "normal",
+            "max_width": "none",
             "alignment": "center",
             "type_preset": "custom",
             "font": "var(--font-body--family)",
-            "font_size": "0.75rem",
-            "line_height": "normal",
+            "line_height": "loose",
             "letter_spacing": "loose",
             "case": "uppercase",
             "wrap": "pretty",
-            "text_color": "{{ settings.color_palette.color1 }}",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "font_size": "0.75rem",
+            "text_color": "{{ settings.color_palette.color1 }}"
+          },
+          "blocks": {}
+        },
+        "title": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Our Story</h1>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-heading--family)",
+            "line_height": "loose",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 40,
+            "padding-inline-start": 0,
             "padding-inline-end": 0
           },
           "blocks": {}
         },
-        "heading": {
+        "lead": {
           "type": "text",
-          "name": "t:names.title",
           "settings": {
-            "text": "<h1>{{ closest.page.title }}</h1>",
+            "text": "<p>Six of Swords is a small London clothing brand for people with their own way of dressing.</p>",
             "width": "100%",
-            "max_width": "narrow",
-            "alignment": "center",
-            "type_preset": "h2",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "custom",
             "font": "var(--font-heading--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
+            "line_height": "loose",
             "letter_spacing": "normal",
             "case": "none",
-            "wrap": "balance",
-            "text_color": "",
+            "wrap": "pretty",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 24,
             "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "font_size": "1.75rem"
+          },
+          "blocks": {}
+        },
+        "intro": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The shapes hold themselves: a raised shoulder, a sleeve that turns, a hem cut off-centre. They're also designed to go on over everything you already own, which is rarer than it sounds. Interesting clothes usually ask more of you than that: an occasion, a whole outfit built around them. The ones that don't ask anything tend to be plain. We didn't want to keep choosing.</p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "line_height": "loose",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 48,
+            "padding-inline-start": 0,
             "padding-inline-end": 0
           },
           "blocks": {}
         },
-        "page-content": {
-          "type": "page-content",
+        "image_one": {
+          "type": "image",
           "settings": {
-            "text_color": ""
+            "image": "",
+            "link": "",
+            "image_ratio": "landscape",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "#00000026",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 48,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "manufacturing_label": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Manufacturing</p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "line_height": "loose",
+            "letter_spacing": "loose",
+            "case": "uppercase",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 12,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "font_size": "0.8125rem"
+          },
+          "blocks": {}
+        },
+        "manufacturing_body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Everything is made in London, by two studios we work with directly. Both are women-led.</p><p>Our toiles come from a sampling studio that works almost entirely in deadstock. Sampling is where a lot of fashion's quiet waste happens: a piece goes through several versions before it's right, and all of that fabric is usually binned. Working in rescued cloth means the working-out costs nothing new.</p><p>The garments themselves are made in a factory that holds SMETA and Fast Forward ethical audits. They also run a training academy in garment skills with apprenticeships and qualifications up to degree level, and houses a repair centre that employs and trains people who find it hard to get work, including people from refugee backgrounds.</p><p>We're small enough to know the people making our clothes and to be in the room while they're being made. Small runs mean nobody is rushed, and you can see that in the finishing \u2014 the parts of a garment most people never look at.</p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "line_height": "loose",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 48,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "fabrics_label": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fabrics</p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "line_height": "loose",
+            "letter_spacing": "loose",
+            "case": "uppercase",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 12,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "font_size": "0.8125rem"
+          },
+          "blocks": {}
+        },
+        "fabrics_body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Most of our cloth is deadstock \u2014 mill ends, cancelled orders, rolls left behind by houses that over-ordered. Or we find here, through local merchants and European mills. When we do buy new, it's natural fibre. Either way it has to be good: we're making things meant to last ten years.</p><p>And the clothes are only part of it. We're working towards workshops for sewing, mending, pattern cutting, and open evenings where people can bring their own projects and sit at the same table. Learning to make and repair things is the other half of buying less.</p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "line_height": "loose",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 48,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "image_two": {
+          "type": "image",
+          "settings": {
+            "image": "",
+            "link": "",
+            "image_ratio": "landscape",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "#00000026",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 48,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "closing": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Made to be worn for years, mended when needed, and handed on eventually.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "line_height": "loose",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "font_size": "1.5rem"
           },
           "blocks": {}
         }
       },
       "block_order": [
         "eyebrow",
-        "heading",
-        "page-content"
+        "title",
+        "lead",
+        "intro",
+        "image_one",
+        "manufacturing_label",
+        "manufacturing_body",
+        "fabrics_label",
+        "fabrics_body",
+        "image_two",
+        "closing"
       ],
       "settings": {
         "content_direction": "column",
-        "gap": 32,
+        "gap": 0,
         "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 32,
-        "padding-block-end": 64
+        "padding-block-start": 48,
+        "padding-block-end": 96
       }
     }
   },
