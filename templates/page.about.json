@@ -162,7 +162,7 @@
         "manufacturing_body": {
           "type": "text",
           "settings": {
-            "text": "<p>Everything is made in London, by two women-led studios we work with directly.</p><p>Our toiles come from a sampling studio that works almost entirely in deadstock. Sampling is where a lot of fashion's quiet waste happens: a piece goes through several versions before it's right, and all of that fabric is usually binned. Working in rescued cloth means the working-out costs nothing new.</p><p>The garments themselves are made in a factory that holds SMETA and Fast Forward ethical audits. They also run a training academy in garment skills with apprenticeships and qualifications up to degree level, and houses a repair centre that employs and trains people who find it hard to get work, including people from refugee backgrounds.</p><p>We're small enough to know the people making our clothes and to be in the room while they're being made. Small runs mean nobody is rushed, and you can see that in the finishing — the parts of a garment most people never look at.</p>",
+            "text": "<p>Everything is made in London, by two women-led studios we work with closely.</p><p>Our toiles come from a sampling studio that works almost entirely in deadstock. Sampling is where a lot of fashion's quiet waste happens: a piece goes through several versions before it's right, and all of that fabric is usually thrown away. Working with deadstock gives abandoned fabrics a new purpose, costing the planet nothing new thus reducing waste.</p><p>The garments themselves are made in a factory that holds SMETA and Fast Forward ethical audits. They also run a training academy in garment skills with apprenticeships and qualifications up to degree level, and houses a repair centre that employs and trains people who find it hard to get work, including people from refugee backgrounds.</p><p>We're small enough to know the people making our clothes and to be in the room while they're being made. Small runs mean nobody is rushed, and you can see that in our quality.</p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
@@ -212,7 +212,7 @@
         "fabrics_body": {
           "type": "text",
           "settings": {
-            "text": "<p>Most of our cloth is deadstock — mill ends, cancelled orders, rolls left behind by houses that over-ordered. Or we find here, through local merchants and European mills. When we do buy new, it's natural fibre. Either way it has to be good: we're making things meant to last ten years.</p><p>And the clothes are only part of it. We're working towards workshops for sewing, mending, pattern cutting, and open evenings where people can bring their own projects and sit at the same table. Learning to make and repair things is the other half of buying less.</p>",
+            "text": "<p>Most of our fabrics are sourced locally and deadstock — mill ends, cancelled orders, rolls left behind by houses that over-ordered. When we do buy new, it's natural fibre. Either way it has to be good: we're making things meant to last ten years.</p><p>And the clothes are only part of it. We're working towards workshops for sewing, mending, pattern cutting, and open evenings where people can bring their own projects and sit at the same table. Learning to make and repair things is the other half of buying less.</p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
