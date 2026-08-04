@@ -65,7 +65,7 @@
         "lead": {
           "type": "text",
           "settings": {
-            "text": "<p>Six of Swords is an independent clothing brand based in London, made for people with their own sense of style.</p>",
+            "text": "<p>Six of Swords is an independent clothing brand based in London.</p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
