@@ -87,31 +87,6 @@
           },
           "blocks": {}
         },
-        "intro": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Interesting clothes usually ask a lot of you: an occasion, a whole outfit built around them. The ones that don't tend to be plain. We didn't want to keep choosing. Our garments are designed to go over everything you already own. Simple, but never boring.</p>",
-            "width": "100%",
-            "max_width": "none",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "loose",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "text_color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 48,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
         "image_one": {
           "type": "image",
           "settings": {
@@ -266,7 +241,7 @@
             "type_preset": "custom",
             "font": "var(--font-heading--family)",
             "font_size": "1.5rem",
-            "line_height": "loose",
+            "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
@@ -286,7 +261,6 @@
         "eyebrow",
         "title",
         "lead",
-        "intro",
         "image_one",
         "manufacturing_label",
         "manufacturing_body",
