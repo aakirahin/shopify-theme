@@ -65,7 +65,7 @@
         "lead": {
           "type": "text",
           "settings": {
-            "text": "<p>Six of Swords is an independent clothing brand based in London, made for people with their own way of dressing</p>",
+            "text": "<p>Six of Swords is an independent clothing brand based in London, made for people with their own sense of style.</p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
@@ -90,7 +90,7 @@
         "intro": {
           "type": "text",
           "settings": {
-            "text": "<p>The shapes hold themselves: a raised shoulder, a sleeve that turns, a hem cut off-centre. They're also designed to go on over everything you already own, which is rarer than it sounds. Interesting clothes usually ask more of you than that: an occasion, a whole outfit built around them. The ones that don't ask anything tend to be plain. We didn't want to keep choosing.</p>",
+            "text": "<p>The shapes hold themselves: a raised shoulder, a sleeve that turns, a hem cut off-centre. They're designed to go over everything you already own, which is rarer than it sounds. </p><p>Interesting clothes usually ask more of you than that: an occasion, a whole outfit built around them. The ones that don't ask anything tend to be plain. We didn't want to keep choosing.</p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
