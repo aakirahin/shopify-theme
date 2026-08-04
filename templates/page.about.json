@@ -159,6 +159,28 @@
           },
           "blocks": {}
         },
+        "image_8MPngr": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image_ratio": "landscape",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "#00000026",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 48,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "fabrics_label": {
           "type": "text",
           "settings": {
@@ -202,6 +224,28 @@
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 48,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "image_HjihCq": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image_ratio": "landscape",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "#00000026",
+            "border_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 48,
             "padding-inline-start": 0,
@@ -315,8 +359,10 @@
         "lead",
         "manufacturing_label",
         "manufacturing_body",
+        "image_8MPngr",
         "fabrics_label",
         "fabrics_body",
+        "image_HjihCq",
         "text_yzXHip",
         "text_tiCAiB",
         "image_two",
