@@ -90,7 +90,7 @@
         "intro": {
           "type": "text",
           "settings": {
-            "text": "<p>Interesting clothes usually ask a lot of you than that: an occasion, a whole outfit built around them. The ones that don't tend to be... plain. We didn't want to keep choosing. Our garments are designed to go over everything you already own. Simple, but never boring.</p>",
+            "text": "<p>Interesting clothes usually ask a lot of you: an occasion, a whole outfit built around them. The ones that don't tend to be... plain. We didn't want to keep choosing. Our garments are designed to go over everything you already own. Simple, but never boring.</p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
